@@ -70,3 +70,30 @@ print(f"Result: {result}")
     Counter(t): Counter({'r': 1, 'o': 1, 't': 1, 'a': 1})
     Result: True
 """
+
+# 🥷🏾 THIRD SOLUTION
+    # Memory: 52.4 MB
+    # Runtime: 0.816 seconds
+    # Complexity: O(n)
+
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        # sorted_s = sorted(s)
+        # sorted_t = sorted(t)
+
+        # print(f"Sorted s: {sorted_s}")
+        # print(f"Sorted t: {sorted_t}")
+
+        # return sorted_s == sorted_t
+        
+        return sorted(s) == sorted(t)
+
+solution = Solution()
+result = solution.isAnagram("cinema", "iceman")
+print(f"Result: {result}")
+
+"""
+    Sorted s: ['a', 'c', 'e', 'i', 'm', 'n']
+    Sorted t: ['a', 'c', 'e', 'i', 'm', 'n']
+    Result: True
+"""
