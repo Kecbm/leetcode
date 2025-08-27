@@ -1,4 +1,9 @@
-# first solution
+# 🥷🏾 FIRST SOLUTION
+    # Memory: 52.7 MB
+    # Runtime: 2.571 seconds
+    # Time complexity: O(n^2)
+    # Space complexity: O(n)
+
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         if len(s) != len(t):
@@ -16,8 +21,52 @@ class Solution:
             countS = s.count(letter)
             countT = t.count(letter)
 
+            # print(f"Letter '{letter}': countS={countS}, countT={countT}")
+
             if countS != countT:
                 return False
-            
+
         return True
-    
+
+# Criar instância e testar
+solution = Solution()
+result = solution.isAnagram("amor", "roma")
+print(f"Result: {result}")
+
+"""
+    Letter 'a': countS=1, countT=1
+    Letter 'm': countS=1, countT=1
+    Letter 'o': countS=1, countT=1
+    Letter 'r': countS=1, countT=1
+    Result: True
+"""
+
+# 🥷🏾 SECOND SOLUTION
+    # Memory: 52 MB
+    # Runtime: 0.9 seconds
+    # Complexity: O(n)
+from collections import Counter
+
+
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        # Counter cria um dicionário com a contagem de cada caractere
+        # counter_s = Counter(s)
+        # counter_t = Counter(t)
+
+        # print(f"Counter(s): {counter_s}")
+        # print(f"Counter(t): {counter_t}")
+
+        # return counter_s == counter_t
+
+        return Counter(s) == Counter(t)
+
+solution = Solution()
+result = solution.isAnagram("ator", "rota")
+print(f"Result: {result}")
+
+"""
+    Counter(s): Counter({'a': 1, 't': 1, 'o': 1, 'r': 1})
+    Counter(t): Counter({'r': 1, 'o': 1, 't': 1, 'a': 1})
+    Result: True
+"""
