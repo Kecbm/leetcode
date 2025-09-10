@@ -60,17 +60,17 @@ class Solution2:
         for word in strs:
             # Ordenar as letras da palavra ("chave")
             key = ''.join(sorted(word))
-            print(f"word: {word}, key: {key}")
+            # print(f"word: {word}, key: {key}")
 
             groups[key].append(word)
-            print(f"groups[{key}]: {groups[key]}")
+            # print(f"groups[{key}]: {groups[key]}")
 
         # Retornar apenas os valores (grupos) do dicionário
         return list(groups.values())
     
 solution = Solution2()
 result = solution.groupAnagrams(["act","pots","tops","cat","stop","hat"])
-print(f"Result: {result}")
+# print(f"Result: {result}")
 
 """
     word: act, key: act
@@ -86,4 +86,34 @@ print(f"Result: {result}")
     word: hat, key: aht
     groups[aht]: ['hat']
     Result: [['act', 'cat'], ['pots', 'tops', 'stop'], ['hat']]
+"""
+
+# 🥷🏾 THIRD SOLUTION
+    # Memory: 51.9 MB
+    # Runtime: 0.98 seconds
+class Solution3:
+    def groupAnagrams(self, strs):
+        from collections import defaultdict
+
+        groups = defaultdict(list)
+
+        for word in strs:
+            # Uma linha: ordenar letras e adicionar ao grupo
+            # print(f"word: {word}, key: {''.join(sorted(word))}")
+            groups[''.join(sorted(word))].append(word)
+
+        return list(groups.values())
+
+solution = Solution3()
+result = solution.groupAnagrams(["rail", "liar", "lair", "dear", "read", "dare"])
+# print(f"Result: {result}")
+
+"""
+    word: rail, key: ailr
+    word: liar, key: ailr
+    word: lair, key: ailr
+    word: dear, key: ader
+    word: read, key: ader
+    word: dare, key: ader
+    Result: [['rail', 'liar', 'lair'], ['dear', 'read', 'dare']]
 """
