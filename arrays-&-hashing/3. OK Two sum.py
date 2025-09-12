@@ -48,3 +48,8 @@ result = solution.twoSum([1, 3, 7, 9], 10)
     Found needed number 9 at index 3
     Result: [0, 3]
 """
+
+# Final solution
+
+# usar um mapa
+# ver no video do neetcode
