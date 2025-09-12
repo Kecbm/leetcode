@@ -8,10 +8,9 @@ Site: https://neetcode.io/
 ## Structure for the file
 
 # 🥷🏾 FIRST SOLUTION
-Code
-Test
-Logs
+# Code
+# Test
+# Logs
 
 # 🏆 FINAL SOLUTION
-
-In video on the site
+# In video on the site
