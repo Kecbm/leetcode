@@ -40,4 +40,43 @@ result = solution.topKFrequent([1,2,2,3,3,3], 2)
 
 # 🏆 FINAL SOLUTION
 
-# In video on the site
+# Algorithm: Bucket sort
+
+class Solution2:
+    def topKFrequent2(self, nums: List[int], k: int):
+        count = {}
+        freq = [[] for i in range(len(nums) + 1)]
+
+        for n in nums:
+            count[n] = 1 + count.get(n, 0)
+            print(f"count[{n}]: {count[n]}")
+
+        for n, c in count.items():
+            freq[c].append(n)
+            print(f"freq[{c}]: {freq[c]}")
+
+        res = []
+
+        for i in range(len(freq) - 1, 0, -1):
+            for n in freq[i]:
+                res.append(n)
+
+                if len(res) == k:
+                    return res
+        
+solution = Solution2()
+result = solution.topKFrequent2([4,4,5,5,5,6], 1)
+print(f"Result: {result}")
+
+"""
+    count[4]: 1
+    count[4]: 2
+    count[5]: 1
+    count[5]: 2
+    count[5]: 3
+    count[6]: 1
+    freq[2]: [4]
+    freq[3]: [5]
+    freq[1]: [6]
+    Result: [5]
+"""
