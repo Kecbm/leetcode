@@ -34,3 +34,21 @@ result = solution.encode(["Meg", "Kali", "Laila", "Luna", "Mel", "Jaia", "Juno"]
     Encoded: Meg#Kali#Laila#Luna#Mel#Jaia#Juno
     Result: Meg#Kali#Laila#Luna#Mel#Jaia#Juno
 """
+
+class Solution2:
+    def decode(self, s: str) -> List[str]:
+        # Transformar uma string em uma lista de strings
+        separator = "#"
+
+        # Dividir a string pelo separador
+        decode = s.split(separator)
+
+        return decode
+
+solution2 = Solution2()
+result = solution2.decode("Guitar Hero III#CSGO#Gran Turismo 6#Fifa 19")
+# print(f"Result: {result}")
+
+"""
+    Result: ['Guitar Hero III', 'CSGO', 'Gran Turismo 6', 'Fifa 19']
+"""
