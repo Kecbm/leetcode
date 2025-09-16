@@ -7,10 +7,7 @@ Site: https://neetcode.io/
 
 ## Structure for the file
 
-# 🥷🏾 FIRST SOLUTION
+# 🥷🏾 SOLUTION
 # Code
 # Test
 # Logs
-
-# 🏆 FINAL SOLUTION
-# In video on the site
