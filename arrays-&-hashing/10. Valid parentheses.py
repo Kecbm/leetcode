@@ -51,7 +51,43 @@ Result: True
 
 solution2 = Solution2()
 result = solution2.isValid2("[(])")
-print(f"Result: {result}")
+# print(f"Result: {result}")
 """
 Result: False
+"""
+
+class Solution3:
+    def validated(self, s: str, expected: str) -> bool:
+        for i in range(1, len(expected)):
+            if s[i] != expected[i - 1]:
+                return False
+        
+        return True
+    
+    def isValid3(self, s: str) -> bool:
+        if len(s) < 2:
+            return False
+
+        if len(s) == 2:
+            if s.startswith("("):
+                return s.endswith(")")
+            if s.startswith("["):
+                return s.endswith("]")
+            if s.startswith("{"):
+                return s.endswith("}")
+
+        if s.startswith("("):
+            return self.validated(s, "[{}])")
+        
+        if s.startswith("["):
+            return self.validated(s, "{}]")
+        
+        if s.startswith("{"):
+            return self.validated(s, "}")
+        
+solution3 = Solution3()
+result = solution3.isValid3("[]")
+print(f"Result: {result}")
+"""
+Result: True
 """
