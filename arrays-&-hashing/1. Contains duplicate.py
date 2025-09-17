@@ -14,7 +14,7 @@ class Solution:
         # Ordena o dicionário por ordem decrescente
         result = dict(sorted(count.items(), key=lambda x: x[1], reverse=True))
 
-        print(f"count: {result}")
+        # print(f"count: {result}")
 
         # Verifica se o primeiro valor é maior que 1
         if list(result.values())[0] > 1:
@@ -24,7 +24,7 @@ class Solution:
     
 solution = Solution()
 result = solution.hasDuplicate([1, 2, 3, 3])
-print(f"Result: {result}")
+# print(f"Result: {result}")
 
 """
 count: {3: 2, 1: 1, 2: 1}
