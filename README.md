@@ -11,3 +11,9 @@ Site: https://neetcode.io/
 # Code
 # Test
 # Logs
+
+## Type
+
+- 🟢 Easy
+- 🟡 Medium
+- 🔴 Hard
