@@ -18,4 +18,10 @@ Site: https://neetcode.io/
 - 🟡 Medium
 - 🔴 Hard
 
+## Need help to solved the problem?
+
+Search in the Google, and add the reference in the file:
+
+# Example for solution: url
+
 "It's not much, but it's honest work 🤠"
