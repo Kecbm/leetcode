@@ -28,3 +28,5 @@ print(f"Result: {result}")
 """
 Result: ['neet', 'code', 'love', 'you']
 """
+
+# Example for solution: https://algo.monster/liteproblems/271
