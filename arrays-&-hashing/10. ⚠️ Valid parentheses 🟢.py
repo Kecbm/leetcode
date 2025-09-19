@@ -140,3 +140,5 @@ print(f"Result: {result}")
 """
 Result: True
 """
+
+# Example for solution: https://medium.com/codex/leetcode-20-valid-parentheses-python-programming-solution-10aed7025b92
