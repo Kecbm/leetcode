@@ -20,7 +20,7 @@ Site: https://neetcode.io/
 
 ## Need help to solved the problem?
 
-Search in the Google, and add the reference in the file:
+See the solution section
 
 # Example for solution: url
 
