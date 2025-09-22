@@ -91,7 +91,7 @@ class Solution3:
         return False
         
 solution3 = Solution3()
-result = solution3.isValid3("[]")
+result = solution3.isValid3("{}")
 # print(f"Result: {result}")
 """
 Result: True
@@ -136,9 +136,67 @@ class Solution4:
 
 solution4 = Solution4()
 result = solution4.isValid4("()[]{}")
-print(f"Result: {result}")
+# print(f"Result: {result}")
 """
 Result: True
 """
 
-# Example for solution: https://medium.com/codex/leetcode-20-valid-parentheses-python-programming-solution-10aed7025b92
+# Solution: Brute Force
+
+class Solution5:
+    def isValid5(self, s: str) -> bool:
+        # Enquanto houver pares válidos de parênteses na string
+        # Continue removendo eles até que não sobre nenhum
+        while '()' in s or '{}' in s or '[]' in s:
+            # Remove todos os pares válidos encontrados
+            # Isso funciona porque pares válidos sempre podem ser removidos
+            # sem afetar a validade dos outros pares
+
+            print(f"String: {s}")
+
+            s = s.replace('()', '') # Remove parênteses
+            s = s.replace('{}', '') # Remove chaves
+            s = s.replace('[]', '') # Remove colchetes
+
+        # Se a string ficou vazia, significa que todos os parênteses
+        # estavam corretamente balanceados e puderam ser removidos
+        # Se sobrou algo, significa que havia parênteses desbalanceados
+        print(f"Final string: {s}")
+        return s == ''
+
+solution5 = Solution5()
+# result1 = solution5.isValid5("[]")
+# print(f"Result: {result1}")
+
+"""
+String: []
+Final string: 
+Result: True
+"""
+
+# result2 = solution5.isValid5("([{}])")
+# print(f"Result: {result2}")
+
+"""
+String: ([{}])
+String: ()
+Final string: 
+Result: True
+"""
+
+# result3 = solution5.isValid5("[(])")
+# print(f"Result: {result3}")
+
+"""
+Final string: [(])
+Result: False
+"""
+
+result4 = solution5.isValid5("()[]{}")
+print(f"Result: {result4}")
+
+"""
+String: ()[]{}
+Final string: 
+Result: True
+"""
