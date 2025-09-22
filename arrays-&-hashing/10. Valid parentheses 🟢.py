@@ -141,7 +141,7 @@ result = solution4.isValid4("()[]{}")
 Result: True
 """
 
-# Solution: Brute Force
+# 🏆 Solution: Brute Force
 
 class Solution5:
     def isValid5(self, s: str) -> bool:
