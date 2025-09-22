@@ -167,7 +167,6 @@ class Solution5:
 solution5 = Solution5()
 # result1 = solution5.isValid5("[]")
 # print(f"Result: {result1}")
-
 """
 String: []
 Final string: 
@@ -176,7 +175,6 @@ Result: True
 
 # result2 = solution5.isValid5("([{}])")
 # print(f"Result: {result2}")
-
 """
 String: ([{}])
 String: ()
@@ -186,7 +184,6 @@ Result: True
 
 # result3 = solution5.isValid5("[(])")
 # print(f"Result: {result3}")
-
 """
 Final string: [(])
 Result: False
@@ -194,7 +191,6 @@ Result: False
 
 result4 = solution5.isValid5("()[]{}")
 print(f"Result: {result4}")
-
 """
 String: ()[]{}
 Final string: 
