@@ -17,29 +17,29 @@ class Solution:
     def binarySearch(self, arr: List, targetVal: int) -> int:
         left = 0
         right = len(arr) - 1
-        print(f"Iniciando busca por {targetVal} no array {arr}")
+        # print(f"Iniciando busca por {targetVal} no array {arr}")
 
         while left <= right:
             mid = (left + right) // 2
-            print(f"left={left}, right={right}, mid={mid}, arr[mid]={arr[mid]}")
+            # print(f"left={left}, right={right}, mid={mid}, arr[mid]={arr[mid]}")
 
             if arr[mid] == targetVal:
-                print(f"Valor encontrado no índice {mid}")
+                # print(f"Valor encontrado no índice {mid}")
                 return mid
         
             if arr[mid] < targetVal:
-                print(f"{arr[mid]} < {targetVal}, buscando na metade direita")
+                # print(f"{arr[mid]} < {targetVal}, buscando na metade direita")
                 left = mid + 1
             else:
-                print(f"{arr[mid]} > {targetVal}, buscando na metade esquerda")
+                # print(f"{arr[mid]} > {targetVal}, buscando na metade esquerda")
                 right = mid - 1
         
-        print("Valor não encontrado")
+        # print("Valor não encontrado")
         return -1
     
 solution = Solution()
 result = solution.binarySearch([1, 3, 5, 7, 9, 11, 13, 15, 17, 19], 11)
-print(f"Result: {result}")
+# print(f"Result: {result}")
 """
 Iniciando busca por 11 no array [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
 left=0, right=9, mid=4, arr[mid]=9
