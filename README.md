@@ -16,3 +16,8 @@ Site: https://neetcode.io/
 See the solution section
 
 "It's not much, but it's honest work 🤠"
+
+
+## Next problem
+
+Linked list
