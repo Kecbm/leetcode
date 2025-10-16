@@ -20,4 +20,4 @@ See the solution section
 
 ## Next problem
 
-Linked list
+Bit manipulation: see the optimal solution in the video and apply it
