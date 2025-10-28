@@ -13,3 +13,8 @@ print(f"Result: {result}")
 """
 Result: 4
 """
+
+# 🏆 Solution
+# Built-In Function
+
+# This format is a optimized solution
