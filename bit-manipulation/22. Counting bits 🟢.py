@@ -46,3 +46,18 @@ result = solution.countBits(4)
   '100' tem 1 uns
 Result: [0, 1, 1, 2, 1]
 """
+
+# 🏆 Solution
+# Built-In Function
+
+class Solution2:
+    def countBits(self, n: int) -> List[int]:
+        return [bin(i).count('1') for i in range(n + 1)]
+    
+solution2 = Solution2()
+result = solution2.countBits(4)
+# print(f"Result: {result}")
+
+"""
+Result: [0, 1, 1, 2, 1]
+"""
