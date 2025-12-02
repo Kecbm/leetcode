@@ -19,7 +19,7 @@ class Solution2:
 
 solution2 = Solution2()
 result = solution2.getSum2(4, 7)
-print(f"Result: {result}")
+# print(f"Result: {result}")
 
 """
 Result: 11
