@@ -22,77 +22,77 @@ Result: [-1, 0, 1]
 
 class Solution2:
     def threeSum2(self, nums):
-        print("=" * 60)
-        print(f"📥 ENTRADA: {nums}")
+        # print("=" * 60)
+        # print(f"📥 ENTRADA: {nums}")
         
         # Passo 1: Ordenar
         nums.sort()
-        print(f"📊 ORDENADO: {nums}")
-        print("=" * 60)
+        # print(f"📊 ORDENADO: {nums}")
+        # print("=" * 60)
         
         resultado = []
         
         # Passo 2: Fixar o primeiro número
         for i in range(len(nums) - 2):
-            print(f"\n🔵 ITERAÇÃO i={i}")
-            print(f"   Número fixo: nums[{i}] = {nums[i]}")
+            # print(f"\n🔵 ITERAÇÃO i={i}")
+            # print(f"   Número fixo: nums[{i}] = {nums[i]}")
             
             # Pular duplicatas do primeiro número
             if i > 0 and nums[i] == nums[i - 1]:
-                print(f"   ⏭️  PULANDO duplicata: {nums[i]} (já processado)")
+                # print(f"   ⏭️  PULANDO duplicata: {nums[i]} (já processado)")
                 continue
             
             # Passo 3: Two Pointers
             esquerda = i + 1
             direita = len(nums) - 1
             
-            print(f"   Iniciando Two Pointers:")
-            print(f"   esquerda={esquerda}, direita={direita}")
-            print(f"   {nums}")
-            print(f"   {' ' * (i * 4)}↑{' ' * ((esquerda - i - 1) * 4)}↑{' ' * ((direita - esquerda - 1) * 4)}↑")
-            print(f"   {' ' * (i * 4)}i{' ' * ((esquerda - i - 1) * 4)}L{' ' * ((direita - esquerda - 1) * 4)}R")
+            # print(f"   Iniciando Two Pointers:")
+            # print(f"   esquerda={esquerda}, direita={direita}")
+            # print(f"   {nums}")
+            # print(f"   {' ' * (i * 4)}↑{' ' * ((esquerda - i - 1) * 4)}↑{' ' * ((direita - esquerda - 1) * 4)}↑")
+            # print(f"   {' ' * (i * 4)}i{' ' * ((esquerda - i - 1) * 4)}L{' ' * ((direita - esquerda - 1) * 4)}R")
             
             passo = 0
             while esquerda < direita:
                 passo += 1
                 soma = nums[i] + nums[esquerda] + nums[direita]
                 
-                print(f"\n   📍 Passo {passo}:")
-                print(f"      nums[{i}]={nums[i]}, nums[{esquerda}]={nums[esquerda]}, nums[{direita}]={nums[direita]}")
-                print(f"      Soma: {nums[i]} + {nums[esquerda]} + {nums[direita]} = {soma}")
+                # print(f"\n   📍 Passo {passo}:")
+                # print(f"      nums[{i}]={nums[i]}, nums[{esquerda}]={nums[esquerda]}, nums[{direita}]={nums[direita]}")
+                # print(f"      Soma: {nums[i]} + {nums[esquerda]} + {nums[direita]} = {soma}")
                 
                 if soma == 0:
                     tripla = [nums[i], nums[esquerda], nums[direita]]
-                    print(f"      ✅ ENCONTROU! {tripla}")
+                    # print(f"      ✅ ENCONTROU! {tripla}")
                     resultado.append(tripla)
                     
                     # Pular duplicatas da esquerda
                     while esquerda < direita and nums[esquerda] == nums[esquerda + 1]:
                         esquerda += 1
-                        print(f"      ⏭️  Pulando duplicata esquerda: {nums[esquerda]}")
+                        # print(f"      ⏭️  Pulando duplicata esquerda: {nums[esquerda]}")
                     
                     # Pular duplicatas da direita
                     while esquerda < direita and nums[direita] == nums[direita - 1]:
                         direita -= 1
-                        print(f"      ⏭️  Pulando duplicata direita: {nums[direita]}")
+                        # print(f"      ⏭️  Pulando duplicata direita: {nums[direita]}")
                     
                     esquerda += 1
                     direita -= 1
-                    print(f"      ➡️  Movendo ambos: esquerda={esquerda}, direita={direita}")
+                    # print(f"      ➡️  Movendo ambos: esquerda={esquerda}, direita={direita}")
                     
                 elif soma < 0:
-                    print(f"      ⬆️  Soma muito pequena ({soma} < 0)")
+                    # print(f"      ⬆️  Soma muito pequena ({soma} < 0)")
                     esquerda += 1
-                    print(f"      ➡️  Movendo esquerda para: {esquerda}")
+                    # print(f"      ➡️  Movendo esquerda para: {esquerda}")
                     
                 else:  # soma > 0
-                    print(f"      ⬇️  Soma muito grande ({soma} > 0)")
+                    # print(f"      ⬇️  Soma muito grande ({soma} > 0)")
                     direita -= 1
-                    print(f"      ⬅️  Movendo direita para: {direita}")
+                    # print(f"      ⬅️  Movendo direita para: {direita}")
         
-        print("\n" + "=" * 60)
-        print(f"🎯 RESULTADO FINAL: {resultado}")
-        print("=" * 60)
+        # print("\n" + "=" * 60)
+        # print(f"🎯 RESULTADO FINAL: {resultado}")
+        # print("=" * 60)
         
         return resultado
 
